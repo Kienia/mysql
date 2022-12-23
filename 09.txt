@@ -1,0 +1,18 @@
+СОРТИРОВКА ДАННЫХ
+
+1) По одному столбцу
+SELECT column_1, column_2 FROM table_1 ORDER BY column_2;  - Данные отсортированы от меньшего к большему по колонке column_2
+
+SELECT column_1 FROM table_1 ORDER BY column_2
+* column_2 - Может отсутствовать в выборке, данные всеравно будут отсортированы по этой колонке если она указана в ORDER_BY
+
+2) По нескольким столбцам
+SELECT column_1, column_2, column_3 FROM table_1 ORDER BY column_1, column_2; - Сначала отсортирует по column_1, а column_2 отсортирует в пределах column_1
+SELECT column_1, column_2, column_3 FROM table_1 ORDER BY 1, 2; - Сокращенная форма (редко используется !нерекомендуется!)
+
+3) Сортировка возможна в двух направлениях от меньшего к большему(по умолчанию) или от большего к меньшему
+SELECT column_1, column_2 FROM table_1 ORDER BY column_2; - от меньшего к большему(по умолчанию)  или ASC (SELECT column_1, column_2 FROM table_1 ORDER BY column_2 ASC)
+SELECT column_1, column_2 FROM table_1 ORDER BY column_2 DESC; -  DESC в обратном порядке
+
+4) При множественной сортировке можно указать каждому свое направление сортировки
+SELECT column_1, column_2, column_3 FROM table_1 ORDER BY column_1 DESC, column_2;
