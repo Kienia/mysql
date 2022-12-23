@@ -1,0 +1,17 @@
+Выбрали нужные колонки из таблицы table_name:
+SELECT column_1, column_2 column_3 FROM `table_name`; 
+
+КОММЕНТАРИИ В SQL:
+1) #SELECT * FROM `table_name`; # - символ комментария
+2)-- SELECT * FROM `table_name`; (-- и проблел) - символ комментария (часто используется)
+3)/*                          
+SELECT * FROM `table_name`; /* комментарий */  - Многострочный комментарий 
+*/
+
+ВЫБОРКА ЗАПИСЕЙ БЕЗ ДУБЛЕЙ
+SELECT DISTING column_1 FROM `table_name`; DISTING - Выбирает уникальные(непвоторяющееся) записи
+
+ОГРАНИЧЕНИЕ ВЫБОРКИ
+SELECT column_1, column_2 column_3 FROM `table_name` LIMIT 5;  LIMIT 5 - Вернет только первые 5 записей
+SELECT column_1, column_2 column_3 FROM `table_name` LIMIT 5 OFFSET 5;  OFFSET 5 - Пропусти первых 5 записей LIMIT 5 верни 5 записей начиная с 6
+SELECT column_1, column_2 column_3 FROM `table_name` LIMIT 5,5;  LIMIT 5,5 - Сокращенная запись предыдущего варианта
